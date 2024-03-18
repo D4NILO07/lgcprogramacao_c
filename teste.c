@@ -1,23 +1,38 @@
 #include <stdio.h>
-// std -> standart
-// i -> input
-// o -> output
+#include <stdlib.h>
+#include <locale.h>
 
-// Função principal.
 int main(){
+	setlocale(LC_ALL, "portuguese");
+	setlocale(LC_ALL, "");
 	
-	// Comando para mostrar no terminal.
-	printf("Bem-Vindo Danilo!");
-	printf("\nYou are is beautifull!");
+	//Variaveis
 	
-	// Comando para pressionar uma tecla
-	// antes de finalizar o programa.
-	getchar();
+	float soma, subtracao, multiplicacao, divisao;
+	float primeiroNumero, segundoNumero;
 	
-	//Comando para retornat o código 0.
-	//Código usado para informar que o
-	// programa finalizou normalmente.
-	return 0;
+	//Dados
+	
+	printf("Digite o primeiro número: ");
+	scanf("%f", &primeiroNumero);
+	
+	printf("Digite o segundo número: ");
+	scanf("%f", &segundoNumero);
+	
+	//calculos
+	
+	soma = (primeiroNumero + segundoNumero);
+	subtracao = (primeiroNumero - segundoNumero);
+	multiplicacao = (primeiroNumero * segundoNumero);
+	divisao = (primeiroNumero / segundoNumero);
+	
+	//Resultados
+	
+	printf("Soma: %.0f ", soma);
+	printf("\nSubtração: %.0f ", subtracao);
+	printf("\nMultiplicação: %.0f ", multiplicacao);
+	printf("\nDivisão: %.0f ", divisao);
+	
+	
+	
 }
-
-
