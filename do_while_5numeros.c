@@ -16,12 +16,15 @@ int main() {
 	int contador = 0;
 	
 	
-	for( i = 0; i < TAM; i++) { 
+    do { 
 	       
-		    printf("Digite o %iº número inteiro: ", i+1);
+		    printf("Digite um número inteiro: ");
 			scanf("%i", &numero);
-	
-	 vetor[i] = numero;
+			
+			if(numero != 0){
+				contador++;
+			}
+
 	 
 	 if(numero < 0){
 	 	quantidadeNegativos++;
@@ -44,16 +47,13 @@ int main() {
 	 	numeroImpar++;
 	 }  
 	 
-	 }
-	 system ("cls");
+	 } 
+	 
+	 } while (numero != 0 );
 	 
 	 
-		contador++;
-		
-	} 
 	
-	for(i = 0; i < TAM; i++)
-	printf("%iº número: %i \n", i+1, vetor[i]);
+
 	printf("Números pares: %i\n", numeroPar);
 	printf("Números Ímpares: %i\n", numeroImpar);
 	printf("Números Positivos: %i\n", quantidadePositivos);
